@@ -17,7 +17,7 @@
  *
  * @package    Wp_Cbf
  * @subpackage Wp_Cbf/public
- * @author     Guillaume Kanoufi <g.kanoufi@gmail.com>
+ * @author     Wajiha Rizvi <jiyarizvi18@gmail.com>
  */
  
 class Wp_Cbf_Public {
