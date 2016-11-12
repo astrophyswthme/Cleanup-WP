@@ -63,7 +63,7 @@ class Wp_Cbf_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wp-cbf-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->cleanup_wp, plugin_dir_url( __FILE__ ) . 'css/wp-cbf-admin.css', array(), $this->version, 'all' );
 	}
 	/**
 	 * Register the JavaScript for the admin area.
