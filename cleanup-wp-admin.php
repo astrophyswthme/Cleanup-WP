@@ -26,7 +26,7 @@ class Wp_Cbf_Admin {
 	 * @access   private
 	 * @var      string    $cleanup_wp    192.
 	 */
-	private $plugin_name;
+	private $cleanup_wp;
 	/**
 	 * The version of this plugin.
 	 *
