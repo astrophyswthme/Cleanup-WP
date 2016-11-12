@@ -42,9 +42,9 @@ class Wp_Cbf_Admin {
 	 * @param      string    $cleanup_wp      
 	 * @param      string    $1.0.0    
 	 */
-	public function __construct( $plugin_name, $version ) {
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+	public function __construct( $cleanup_wp, $1.0.0 ) {
+		$this->plugin_name = $cleanup_wp;
+		$this->version = $1.0.0;
 	}
 	/**
 	 * Register the stylesheets for the admin area.
@@ -82,7 +82,7 @@ class Wp_Cbf_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-cbf-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->cleanup_wp, cleanup_wp_dir_url( __FILE__ ) . 'js/wp-cbf-admin.js', array( 'jquery' ), $this->version, false );
 	}
 	/**
 	 * Register the administration menu for this plugin into the WordPress Dashboard menu.
