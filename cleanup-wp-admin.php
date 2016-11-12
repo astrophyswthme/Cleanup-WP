@@ -24,7 +24,7 @@ class Wp_Cbf_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string    $cleanup_wp    192.
 	 */
 	private $plugin_name;
 	/**
@@ -32,15 +32,15 @@ class Wp_Cbf_Admin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
+	 * @var      string    $1.0.0    
 	 */
 	private $version;
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
+	 * @param      string    $cleanup_wp      
+	 * @param      string    $1.0.0    
 	 */
 	public function __construct( $plugin_name, $version ) {
 		$this->plugin_name = $plugin_name;
@@ -98,7 +98,7 @@ class Wp_Cbf_Admin {
 		 *        Administration Menus: http://codex.wordpress.org/Administration_Menus
 		 *
 		 */
-		add_options_page( 'Cleanup WP Settings', 'Cleanup WP', 'manage_options', $this->plugin_name, array($this, 'display_plugin_setup_page')
+		add_options_page( 'Cleanup WP Settings', 'Cleanup WP', 'manage_options', $this->cleanup_wp, array($this, 'wp-cbf-admin-display_page')
 		);
 	}
 	 /**
@@ -111,7 +111,7 @@ class Wp_Cbf_Admin {
 		*  Documentation : https://codex.wordpress.org/Plugin_API/Filter_Reference/plugin_action_links_(plugin_file_name)
 		    */
 		$settings_link = array(
-			'<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', $this->plugin_name) . '</a>',
+			'<a href="' . admin_url( 'options-general.php?page=' . $this->cleanup_wp ) . '">' . __('Settings', $this->cleanup_wp ) . '</a>',
 		);
 		return array_merge(  $settings_link, $links );
 	}
@@ -130,7 +130,7 @@ class Wp_Cbf_Admin {
 	* @since    1.0.0
 	*/
 	public function options_update() {
-		register_setting( $this->plugin_name, $this->plugin_name, array($this, 'validate') );
+		register_setting( $this->cleanup_wp, $this->cleanup_wp, array($this, 'validate') );
 	}
 	/**
 	 * Validate all options fields
